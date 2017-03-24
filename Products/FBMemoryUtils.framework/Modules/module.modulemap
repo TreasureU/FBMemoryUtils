@@ -1,0 +1,6 @@
+framework module FBMemoryUtils {
+  umbrella header "FBMemoryUtils.h"
+
+  export *
+  module * { export * }
+}
