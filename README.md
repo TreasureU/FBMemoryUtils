@@ -1,15 +1,15 @@
-#介绍：
+介绍：
 ======
-	FBMemoryUtils是FBMemoryProfiles的静态库，打出来的包是一个framework，mach-o Type是Static Library。
-	官方库[FBMemoryProfiles](https://github.com/facebook/FBMemoryProfiler)地址。
+FBMemoryUtils是FBMemoryProfiles的静态库，打出来的包是一个framework，mach-o Type是Static Library.<br>
+官方库[FBMemoryProfiles](https://github.com/facebook/FBMemoryProfiler)地址.<br>
 
 
-#内容：
+内容：
 ======
-	内含FBMemoryProfiles、FBAllocationTracker、FBRetainCycleDetector三个库的代码
-	FBAllocationTracker：是一个对象生成与生存期检测工具
-	FBRetainCycleDetector：是一个循环引用监测工具
-	FBMemoryProfiles：对上面两种功能进行了集合，并且提供可视化界面、插件功能以及筛选过滤功能。
+内含FBMemoryProfiles、FBAllocationTracker、FBRetainCycleDetector三个库的代码.<br>
+FBAllocationTracker：是一个对象生成与生存期检测工具.<br>
+FBRetainCycleDetector：是一个循环引用监测工具.<br>
+FBMemoryProfiles：对上面两种功能进行了集合，并且提供可视化界面、插件功能以及筛选过滤功能.<br>
 
 #使用说明：
 ========
@@ -21,7 +21,7 @@
 
 #代码内使用简单示例：
 ==================
-	1.建议在main中启动对象生成追踪
+1.建议在main中启动对象生成追踪<br>
 ```Objective-C
 	[FBAssociationManager hook];
 	[[FBAllocationTrackerManager sharedManager] startTrackingAllocations];
@@ -29,7 +29,7 @@
 ```
 
 
-	2.建议在AppDelegate中启动内存分析：
+2.建议在AppDelegate中启动内存分析：<br>
 ```Objective-C
 	self.memoryProfiler = [[FBMemoryProfiler alloc] init];
 	[self.memoryProfiler enable];
